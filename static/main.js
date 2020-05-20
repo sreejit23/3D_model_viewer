@@ -1,7 +1,7 @@
 //Model
 
 var theModel;
-const MODEL_PATH =  "models/black.glb";
+const MODEL_PATH =  "models/glass2.gltf";
 
 const BACKGROUND_COLOR = 0xf1f1f1;
 // Init the scene
@@ -39,7 +39,7 @@ loader.load(MODEL_PATH, function(gltf) {
      }
    });
 // Set the models initial scale   
-  theModel.scale.set(2,2,2);
+  theModel.scale.set(1,1,1);
 
   //theModel.rotation.y = Math.PI;
 
