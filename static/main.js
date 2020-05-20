@@ -3,7 +3,7 @@
 var theModel;
 const MODEL_PATH =  "models/glass2.gltf";
 
-const BACKGROUND_COLOR = 0xf1f1f1;
+const BACKGROUND_COLOR = 0xffffff;
 // Init the scene
 const scene = new THREE.Scene();
 // Set background
@@ -39,12 +39,12 @@ loader.load(MODEL_PATH, function(gltf) {
      }
    });
 // Set the models initial scale   
-  theModel.scale.set(1,1,1);
+  theModel.scale.set(0.5,0.5,0.5);
 
   //theModel.rotation.y = Math.PI;
 
   // Offset the y position a bit
-  theModel.position.y = -0.5;
+  theModel.position.y = 0;
 
   // Add the model to the scene
   scene.add(theModel);
@@ -69,14 +69,14 @@ var dirLight = new THREE.DirectionalLight( 0xffffff, 0.54 );
 // Floor
 var floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
 var floorMaterial = new THREE.MeshPhongMaterial({
-  color: 0xeeeeee,
+  color: 0xffffff,
   shininess: 0
 });
 
 var floor = new THREE.Mesh(floorGeometry, floorMaterial);
 floor.rotation.x = -0.5 * Math.PI;
 floor.receiveShadow = true;
-floor.position.y = -1;
+floor.position.y = 0;
 scene.add(floor);
 
 function resizeRendererToDisplaySize(renderer) {
